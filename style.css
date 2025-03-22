@@ -81,7 +81,7 @@ body::-webkit-scrollbar {
     padding: .7vw 1.5vw;
     background-color: rgb(236, 0, 141);
     margin-left: 5vw;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     cursor: pointer;
     color: white;
     border-radius: .5vw;
@@ -99,6 +99,11 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 45vw; /* Height নির্দিষ্ট করা */
     background-color: aquamarine;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+    
 }
 
 .baner::before {
@@ -109,4 +114,37 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%; /* Parent .baner-এর height অনুযায়ী নির্ধারণ করা */
     background-color: rgba(13, 7, 7, 0.7); /* 70% কালো শেড */
+}
+
+.baner .baner_title{
+    margin-top: 5vw;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    justify-content: space-between;
+    width: 80%;
+}
+.baner .baner_title h1{
+    font-size: 1.5vw;
+}
+.baner .baner_title h1 samp{
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.baner .baner_title button{
+    font-size: 2vw;
+    background:none;
+    border: none;
+    color: white;
+    padding: .1vw 3vw;
+    box-shadow: 10px 10px 10px green inset,
+    -10px -10px 10px rgb(255, 5, 71) inset;
+    margin:0 1vw;
+    transition: all 1s;
+}
+.baner .baner_title button:hover{
+    box-shadow: 10px 10px 10px red inset,
+    -10px -10px 10px green inset;
+    margin:0 1vw;
+    cursor: pointer;
 }

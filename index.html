@@ -27,7 +27,8 @@
             </div>
 
             <div class="head_search">
-                <h1>Se</h1>
+                <input type="text">
+                <button>search</button>
             </div>
 
             <div class="head_signbtn">
@@ -36,20 +37,169 @@
         </div>
     </section>
 
+
+
     <section class="baner">
-
-
         <div class="baner_title">
             <div>
                 <h1><samp>NEW ITEMS</samp> OF THIS SEASON</h1>
             </div>
             <div>
-                <button> L </button>
-                <button>R</button>
+                <button id="leftBtn"> L </button>
+                <button id="rightBtn"> R </button>
             </div>
         </div>
 
+        <div class="baner_wrapper">
+            <div class="baner_body">
+
+                <div class="item">
+                    <div>
+                        <a href="">
+                            <div class="image">
+                                <img src="./1737973259328.jpg" alt="">
+                            </div>
+                            <div class="title">
+                                <h1>Lorem ipsum dolor sit...</h1>
+                                <p>Action</p>
+                                <div style="margin: 0 ; display: flex; text-align: center;">
+                                    <span>* </span>
+                                    <samp
+                                        style="color: white; margin: 0;  z-index: 1; position: relative;  font-size: 1.2vw; margin-left: .5vw;">8.5</samp>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>
+                        <a href="">
+
+                            <div class="image">
+                                <img src="./1737973261341.jpg" alt="">
+                            </div>
+                            <div class="title">
+                                <h1> ipsum dolor sit...</h1>
+                                <p>Action</p>
+                                <div style="margin: 0 ; display: flex; text-align: center;">
+                                    <span>* </span>
+                                    <samp
+                                        style="color: white; margin: 0;  z-index: 1; position: relative;  font-size: 1.2vw; margin-left: .5vw;">8.5</samp>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>
+                        <a href="">
+
+                            <div class="image">
+                                <img src="./1737973275456.jpg" alt="">
+                            </div>
+                            <div class="title">
+                                <h1>Lorem sit...</h1>
+                                <p>Action</p>
+                                <div style="margin: 0 ; display: flex; text-align: center;">
+                                    <span>* </span>
+                                    <samp
+                                        style="color: white; margin: 0;  z-index: 1; position: relative;  font-size: 1.2vw; margin-left: .5vw;">8.5</samp>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="item">
+                <div>
+                    <div class="image">
+                        <img src="./1737973290416.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Lorem </h1>
+                        <p>Action</p>
+                        <div style="margin: 0 ; display: flex; text-align: center;">
+                            <span>* </span>
+                            <samp
+                                style="color: white; margin: 0;  z-index: 1; position: relative;  font-size: 1.2vw; margin-left: .5vw;">8.5</samp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div>
+                    <div class="image">
+                        <img src="./1737983048044.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Lorem </h1>
+                        <p>Action</p>
+                        <div style="margin: 0 ; display: flex; text-align: center;">
+                            <span>* </span>
+                            <samp
+                                style="color: white; margin: 0;  z-index: 1; position: relative;  font-size: 1.2vw; margin-left: .5vw;">8.5</samp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <div class="image">
+                        <img src="./home__bg.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Lorem </h1>
+                        <p>Action</p>
+                        <div style="margin: 0 ; display: flex; text-align: center;">
+                            <span>* </span>
+                            <samp
+                                style="color: white; margin: 0;  z-index: 1; position: relative;  font-size: 1.2vw; margin-left: .5vw;">8.5</samp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
     </section>
+
+    <script>
+        const bannerBody = document.querySelector(".baner_body");
+        const items = document.querySelectorAll(".item");
+
+        document.getElementById("rightBtn").addEventListener("click", function () {
+            const firstItem = bannerBody.firstElementChild;
+            bannerBody.appendChild(firstItem.cloneNode(true)); // নতুন করে শেষের দিকে যোগ হবে
+            bannerBody.removeChild(firstItem); // প্রথম আইটেম সরিয়ে দেওয়া হবে
+        });
+
+        document.getElementById("leftBtn").addEventListener("click", function () {
+            const lastItem = bannerBody.lastElementChild;
+            bannerBody.prepend(lastItem.cloneNode(true)); // নতুন করে শুরুতে যোগ হবে
+            bannerBody.removeChild(lastItem); // শেষের আইটেম সরিয়ে দেওয়া হবে
+        });
+    </script>
+
+
+    <section class="category">
+
+    </section>
+
+    <section class="expected_premiere">
+
+    </section>
+
+
+
+
+
 
 
 

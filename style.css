@@ -112,6 +112,7 @@ body::-webkit-scrollbar {
     box-shadow: 2px 2px 10px rgb(208, 8, 198) inset;
     border: none;
     width: 10vw;
+    margin-right: 5vw;
 }
 
 .head div .head_signbtn button:hover{
